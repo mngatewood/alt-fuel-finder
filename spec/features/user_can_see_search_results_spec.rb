@@ -4,7 +4,7 @@ describe 'when I enter a zip and click locate on the home page' do
 
   before(:each) do
     visit root_path
-    fill_in "input#q.form-control" with "80203"
+    fill_in "q", with: "80203"
     click_on "Locate"
   end
 
@@ -17,13 +17,13 @@ describe 'when I enter a zip and click locate on the home page' do
     end
   end
 
-  it 'sorts stations by distance' do
+  xit 'sorts stations by distance' do
     within("station.sections") do
       # expect first distance to be less than second distance, etc.
     end
   end
 
-  it 'only displays electric and propane stations' do
+  xit 'only displays electric and propane stations' do
 
     # 'ELEC' & 'LPG' only
     within("station.sections") do
@@ -35,7 +35,7 @@ describe 'when I enter a zip and click locate on the home page' do
     end
   end
 
-  it 'displays name, address, fuel types, distance, and access times for each station' do
+  xit 'displays name, address, fuel types, distance, and access times for each station' do
     within("li.station#1") do
       expect(page).to have_content("name")
       expect(page).to have_content("address")
