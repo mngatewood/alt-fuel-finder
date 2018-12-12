@@ -24,10 +24,14 @@ describe 'when I enter a zip and click locate on the home page' do
   end
 
   it 'only displays electric and propane stations' do
+
+    # 'ELEC' & 'LPG' only
     within("station.sections") do
-      expect(page).to_not have_content("other fuel type")
-      expect(page).to_not have_content("other fuel type")
-      expect(page).to_not have_content("other fuel type")
+      expect(page).to_not have_content("Fuel Type: BD")
+      expect(page).to_not have_content("Fuel Type: E85")
+      expect(page).to_not have_content("Fuel Type: HY")
+      expect(page).to_not have_content("Fuel Type: LNG")
+      expect(page).to_not have_content("Fuel Type: CNG")
     end
   end
 
