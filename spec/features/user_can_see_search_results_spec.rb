@@ -9,7 +9,7 @@ describe 'when I enter a zip and click locate on the home page' do
   end
 
   it 'displays 10 closest stations within 6 miles' do
-    within("section.stations") do
+    within("ul.stations") do
       expect(page).to have_css("li.station", count => 10)
       expect(page).to have_content("closest station")
       expect(page).to have_content("tenth station")

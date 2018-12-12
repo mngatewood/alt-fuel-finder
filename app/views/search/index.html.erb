@@ -2,14 +2,14 @@
 
 <% if @facade.stations.first %>
 
-  <ul>
+  <ul class="stations">
     <% @facade.stations.each do |station| %>
       <li>
-        <h3>Station Name: <%= station.name %></h3>
-        <p>Address: <%= station.address %></p>
-        <p>Fuel Types: <%= station.fuel_types %></p>
-        <p>Distance: <%= station.distance %></p>
-        <p>Access Times: <%= station.access_times %></p>
+        <h3>Station Name: <%= station[:station_name] %></h3>
+        <p>Address: <%= station[:street_address] %></p>
+        <p>Fuel Types: <%= station[:fuel_type_code] %></p>
+        <p>Distance: <%= station[:distance] %></p>
+        <p>Access Times: <%= station[:access_days_time] %></p>
       </li>
     <% end %>
   </ul>

@@ -6,7 +6,6 @@ class SearchFacade
 
   def stations
     @stations ||= get_json[:fuel_stations]
-    binding.pry
   end
   
   # def fetch_stations_response
