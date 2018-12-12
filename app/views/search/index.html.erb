@@ -1,0 +1,17 @@
+<h1>Search Results</h1>
+
+<% if @facade.stations.first %>
+
+  <ul>
+    <% @facade.stations.each do |station| %>
+      <li>
+        <h3>Station Name: <%= station.name %></h3>
+        <p>Address: <%= station.address %></p>
+        <p>Fuel Types: <%= station.fuel_types %></p>
+        <p>Distance: <%= station.distance %></p>
+        <p>Access Times: <%= station.access_times %></p>
+      </li>
+    <% end %>
+  </ul>
+
+<% end %>
